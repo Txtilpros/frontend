@@ -67,80 +67,82 @@ function FadeUp({ children, delay = 0, style = {} }) {
 export default function Home() {
   return (
     <>
-      {/* ── HERO ── */}
-      <section style={{ minHeight: '100vh', background: 'var(--navy)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
-        {/* BG effects */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(15,32,68,0.90) 50%, rgba(26,58,107,0.85) 100%)', zIndex: 0 }} />
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: 0.04, backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px)' }} />
-        <div style={{ position: 'absolute', right: -100, top: -100, width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle, rgba(244,115,32,0.15) 0%, transparent 70%)', zIndex: 0 }} />
+       {/* ── HERO ── */}
+     {/* ── HERO ── */}
+<section style={{ minHeight: '100vh', background: 'var(--navy)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
+  {/* BG effects */}
+  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(15,32,68,0.90) 50%, rgba(26,58,107,0.85) 100%)', zIndex: 0 }} />
+  <div style={{ position: 'absolute', inset: 0, zIndex: 0, opacity: 0.04, backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,1) 40px, rgba(255,255,255,1) 41px)' }} />
+  <div style={{ position: 'absolute', right: -100, top: -100, width: 700, height: 700, borderRadius: '50%', background: 'radial-gradient(circle, rgba(244,115,32,0.15) 0%, transparent 70%)', zIndex: 0 }} />
 
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto', padding: '72px 32px 0', width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="hero-grid">
-          <Motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(244,115,32,0.15)', border: '1px solid rgba(244,115,32,0.3)', padding: '6px 14px', borderRadius: 100, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 24 }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--orange)', animation: 'pulse 2s infinite', display: 'block' }} />
-              Established 2014 · Tamil Nadu
-            </div>
-            <h1 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(52px,5.5vw,86px)', color: 'white', letterSpacing: 3, lineHeight: 0.95, marginBottom: 8 }}>
-              <br />TXTILPROS<br /><span style={{ color: 'var(--orange)' }}>MARKETING</span><br />SERVICES
-            </h1>
-            <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.6)', margin: '20px 0 40px', lineHeight: 1.7, maxWidth: 480 }}>
-              Trusted Air Jet Loom Solutions Since 2014. Red Flag authorized dealer with 1200+ installations across South India.
-            </p>
-            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-              <Link to="/login" className="btn btn-outline">Employee Login</Link>
-              <Link to="/contact" className="btn btn-primary"><FaPhone /> Contact Us</Link>
-              <Link to="/products" className="btn btn-outline"><FaCogs /> View Products</Link>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 48 }}>
-              {stats.map((s, i) => (
-                <Motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.1 }}
-                  style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius)', padding: 20, backdropFilter: 'blur(10px)' }}>
-                  <div style={{ fontFamily: 'var(--font-head)', fontSize: 40, color: 'var(--orange)', letterSpacing: 1, lineHeight: 1 }}>{s.num}</div>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginTop: 6 }}>{s.label}</div>
-                </Motion.div>
-              ))}
-            </div>
+  <div style={{ position: 'relative', zIndex: 1, maxWidth: 1280, margin: '0 auto', padding: '72px 32px 96px', width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="hero-grid">
+    <Motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(244,115,32,0.15)', border: '1px solid rgba(244,115,32,0.3)', padding: '6px 14px', borderRadius: 100, fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 24 }}>
+        <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--orange)', animation: 'pulse 2s infinite', display: 'block' }} />
+        Established 2014 · Tamil Nadu
+      </div>
+      {/* FIX 1: removed stray leading <br /> that pushed the heading down with a blank line */}
+      <h1 style={{ fontFamily: 'var(--font-head)', fontSize: 'clamp(52px,5.5vw,86px)', color: 'white', letterSpacing: 3, lineHeight: 0.95, marginBottom: 8 }}>
+        TXTILPROS<br /><span style={{ color: 'var(--orange)' }}>MARKETING &</span><br />SERVICES
+      </h1>
+      <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.6)', margin: '20px 0 40px', lineHeight: 1.7, maxWidth: 480 }}>
+        Trusted Air Jet Loom Solutions Since 2014. Red Flag authorized dealer with 1200+ installations across South India.
+      </p>
+      <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+        <Link to="/login" className="btn btn-outline">Employee Login</Link>
+        <Link to="/contact" className="btn btn-primary"><FaPhone /> Contact Us</Link>
+        <Link to="/products" className="btn btn-outline"><FaCogs /> View Products</Link>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 48 }}>
+        {stats.map((s, i) => (
+          <Motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.1 }}
+            style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius)', padding: 20, backdropFilter: 'blur(10px)' }}>
+            <div style={{ fontFamily: 'var(--font-head)', fontSize: 40, color: 'var(--orange)', letterSpacing: 1, lineHeight: 1 }}>{s.num}</div>
+            <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)', marginTop: 6 }}>{s.label}</div>
           </Motion.div>
+        ))}
+      </div>
+    </Motion.div>
 
-          {/* Hero visual */}
-          <Motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} style={{ display: 'flex', flexDirection: 'column', gap: 16 }} className="hero-visual">
-            <div style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 16, padding: 32, backdropFilter: 'blur(12px)' }}>
-              <div style={{ width: '100%', height: 240, overflow: 'hidden', borderRadius: 10, background: 'rgba(0,0,0,0.25)', marginBottom: 24 }}>
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  controls
-                  aria-label="Red Flag Air Jet Loom in operation"
-                  style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
-                >
-                  <source src="/videos/red-flag-air-jet-loom.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <h3 style={{ fontFamily: 'var(--font-head)', fontSize: 26, color: 'white', letterSpacing: 2 }}>RED FLAG AIR JET LOOM</h3>
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginTop: 6 }}>High-performance weaving solutions for modern textile mills</p>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-              {[
-                { icon: '🔧', label: 'Expert Service & Maintenance' },
-                { icon: '📦', label: 'Genuine Spare Parts Supply' },
-              ].map((c, i) => (
-                <div key={i} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius)', padding: 20 }}>
-                  <div style={{ fontSize: 22, marginBottom: 10 }}>{c.icon}</div>
-                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>{c.label}</span>
-                </div>
-              ))}
-            </div>
-          </Motion.div>
+    {/* Hero visual */}
+    <Motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingBottom: 90 }} className="hero-visual">
+      {/* FIX 2: paddingBottom above + shorter video + extra card padding keep this clear of the fixed WhatsApp/Call buttons */}
+      <div style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 16, padding: '12px 16px 24px', backdropFilter: 'blur(12px)' }}>
+        <div style={{ width: '100%', height: 300, overflow: 'hidden', borderRadius: 10, background: 'rgba(0,0,0,0.25)', marginBottom: 20 }}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-label="Red Flag Air Jet Loom in operation"
+            style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
+          >
+            <source src="https://res.cloudinary.com/dymqv8ues/video/upload/v1787131027/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+        <h3 style={{ fontFamily: 'var(--font-head)', fontSize: 26, color: 'white', letterSpacing: 2 }}>RED FLAG AIR JET LOOM</h3>
+        <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginTop: 6 }}>High-performance weaving solutions for modern textile mills</p>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        {[
+          { icon: '🔧', label: 'Expert Service & Maintenance' },
+          { icon: '📦', label: 'Genuine Spare Parts Supply' },
+        ].map((c, i) => (
+          <div key={i} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 'var(--radius)', padding: 20 }}>
+            <div style={{ fontSize: 22, marginBottom: 10 }}>{c.icon}</div>
+            <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>{c.label}</span>
+          </div>
+        ))}
+      </div>
+    </Motion.div>
+  </div>
 
-        <style>{`
-          @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
-          @media (max-width:1024px) { .hero-grid { grid-template-columns:1fr !important; } .hero-visual { display:none !important; } }
-        `}</style>
-      </section>
+  <style>{`
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+    @media (max-width:1024px) { .hero-grid { grid-template-columns:1fr !important; } .hero-visual { display:none !important; } }
+  `}</style>
+</section>
 
       {/* ── HIGHLIGHTS ── */}
       <div style={{ background: 'var(--orange)' }}>
