@@ -13,7 +13,7 @@ export function StatCard({ label, value, hint }) {
 export function TopCornerActions({ showAuthButtons, onLoginClick, onRegisterClick, onSettingsClick }) {
   return (
     <div className="top-corner-actions">
-      <button className="ghost-button top-corner-button" onClick={onSettingsClick} type="button">
+      {/* <button className="ghost-button top-corner-button" onClick={onSettingsClick} type="button">
         Settings
       </button>
       {showAuthButtons ? (
@@ -25,7 +25,7 @@ export function TopCornerActions({ showAuthButtons, onLoginClick, onRegisterClic
             Register
           </button>
         </>
-      ) : null}
+      ) : null} */}
     </div>
   )
 }
