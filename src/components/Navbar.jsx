@@ -37,19 +37,8 @@ export default function Navbar() {
           maxWidth: 1280, margin: '0 auto', width: '100%', padding: '0 32px',
           display: 'flex', alignItems: 'center', justifyContent: 'space-between'
         }}>
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-            <div style={{
-              width: 40, height: 40, background: 'var(--orange)', borderRadius: 6,
-              display: 'flex', alignItems: 'center', justifyContent: 'center'
-            }}>
-              <svg viewBox="0 0 24 24" style={{ width: 22, height: 22, fill: 'white' }}>
-                <path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z"/>
-              </svg>
-            </div>
-            <div style={{ color: 'white' }}>
-              <div style={{ fontFamily: 'var(--font-head)', fontSize: 26, letterSpacing: 2, lineHeight: 1 }}>TXTILPROS</div>
-              <div style={{ fontSize: 8, letterSpacing: 3, color: 'var(--orange)', fontWeight: 600, textTransform: 'uppercase' }}> Marketing Services</div>
-            </div>
+          <Link to="/" className="site-logo-link" aria-label="TxtilPros home">
+            <img src="/logo.png" alt="TxtilPros Marketing & Services" />
           </Link>
 
           {/* Desktop nav */}
@@ -131,6 +120,11 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: flex !important; }
+          .site-logo-link {
+            width: 178px !important;
+            height: 50px !important;
+            padding: 7px 10px !important;
+          }
         }
       `}</style>
     </>

@@ -5,6 +5,7 @@ import AccessDeniedPanel from '../../components/AccessDeniedPanel'
 import SalesLoginScreen from './components/SalesLoginScreen'
 import useSalesPortal from './useSalesPortal'
 import { isOwner, isSalesManager, isSalesUser } from './utils'
+import { BrandLogo } from '../reporting/components/SharedReportingUi'
 
 function SalesNavigation({ activePath, user }) {
   const canManageSales = isOwner(user) || isSalesManager(user)
@@ -305,10 +306,13 @@ export default function SalesPortalPage() {
         <div className="orb orb-two" />
         <section className="hero-panel">
           <header className="dashboard-header">
-            <div>
-              <div className="eyebrow">Independent sales workspace</div>
-              <h2>{isOwner(user) ? 'Owner sales view' : isSalesManager(user) ? 'Sales manager dashboard' : 'Sales dashboard'}</h2>
-              <p className="muted">Signed in as {user.name} ({user.role}){user.department ? ` | ${user.department}` : ''}</p>
+            <div className="dashboard-heading">
+              <BrandLogo compact />
+              <div>
+                <div className="eyebrow">Independent sales workspace</div>
+                <h2>{isOwner(user) ? 'Owner sales view' : isSalesManager(user) ? 'Sales manager dashboard' : 'Sales dashboard'}</h2>
+                <p className="muted">Signed in as {user.name} ({user.role}){user.department ? ` | ${user.department}` : ''}</p>
+              </div>
             </div>
             <div className="header-actions">
               {isOwner(user) ? (

@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import { BrandLogo } from './SharedReportingUi'
 
 export default function LoginScreen({ credentials, loading, setCredentials, onSubmit }) {
   return (
     <div className="login-shell">
       <section className="login-panel glass-card">
-        <div className="eyebrow">TXTILPROS service reporting</div>
+        <BrandLogo />
+        <div className="eyebrow " >TXTILPROS service reporting</div>
         <h1>Employee Work Reporting</h1>
         <p className="lead">
           Daily updates, machine issues, photo uploads, weekly summaries, and admin visibility for textile machinery service teams.

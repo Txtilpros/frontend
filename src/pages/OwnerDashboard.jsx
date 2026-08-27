@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import AccessDeniedPanel from '../components/AccessDeniedPanel'
 import { apiRequest } from '../features/reporting/api'
 import { TOKEN_KEY } from '../features/reporting/constants'
+import { BrandLogo } from '../features/reporting/components/SharedReportingUi'
 
 export default function OwnerDashboard() {
   const navigate = useNavigate()
@@ -60,6 +61,7 @@ export default function OwnerDashboard() {
         <div className="orb orb-two" />
         <section className="hero-panel">
           <div className="glass-card section-card owner-hub">
+            <BrandLogo compact />
             <div className="eyebrow">Super admin workspace</div>
             <h1>Owner Dashboard</h1>
             <p className="lead">Use this hub to enter the isolated Service and Sales modules with full owner visibility.</p>

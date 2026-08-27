@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import { BrandLogo } from '../../reporting/components/SharedReportingUi'
 
 export default function SalesLoginScreen({ credentials, loading, setCredentials, onSubmit }) {
   return (
     <div className="login-shell">
       <section className="login-panel glass-card">
+        <BrandLogo />
         <div className="eyebrow">TXTILPROS sales reporting</div>
         <h1>Sales Work Reporting</h1>
         <p className="lead">

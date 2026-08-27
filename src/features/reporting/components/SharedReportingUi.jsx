@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom'
 
+export function BrandLogo({ compact = false }) {
+  return (
+    <Link aria-label="TxtilPros home" className={`brand-lockup${compact ? ' brand-lockup-compact' : ''}`} to="/">
+      <img alt="TxtilPros Marketing & Services" src="/logo.png" />
+    </Link>
+  )
+}
+
 export function StatCard({ label, value, hint }) {
   return (
     <article className="stat-card glass-card">
@@ -10,7 +18,7 @@ export function StatCard({ label, value, hint }) {
   )
 }
 
-export function TopCornerActions({ showAuthButtons, onLoginClick, onRegisterClick, onSettingsClick }) {
+export function TopCornerActions() {
   return (
     <div className="top-corner-actions">
       {/* <button className="ghost-button top-corner-button" onClick={onSettingsClick} type="button">
@@ -36,12 +44,15 @@ export function DashboardHeader({ user, weekStart, setWeekStart, refresh, onLogo
 
   return (
     <header className="dashboard-header">
-      <div>
-        <div className="eyebrow">Secure reporting workspace</div>
-        <h2>{isManagementUser ? 'Management dashboard' : 'Employee dashboard'}</h2>
-        <p className="muted">
-          Signed in as {user.name} ({user.role}){user.department ? ` | ${user.department}` : ''}
-        </p>
+      <div className="dashboard-heading">
+        <BrandLogo compact />
+        <div>
+          <div className="eyebrow">Secure reporting workspace</div>
+          <h2>{isManagementUser ? 'Management dashboard' : 'Employee dashboard'}</h2>
+          <p className="muted">
+            Signed in as {user.name} ({user.role}){user.department ? ` | ${user.department}` : ''}
+          </p>
+        </div>
       </div>
       <div className="header-actions">
         <label className="field compact-field">
