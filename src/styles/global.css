@@ -179,9 +179,20 @@ button { cursor: pointer; }
 .report-footer,
 .app-footer { justify-content: space-between; align-items: flex-start; }
 
-.dashboard-header { margin-bottom: 22px; }
+.dashboard-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: clamp(28px, 5vw, 72px);
+  margin-bottom: 22px;
+}
 .stack-lg { flex-direction: column; }
-.header-actions { align-items: end; flex-wrap: wrap; }
+.header-actions {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 700px;
+}
 
 .admin-nav-shell {
   padding: 14px;
@@ -1241,6 +1252,8 @@ a {
   .report-topline,
   .report-footer,
   .leave-admin-meta { flex-direction: column; }
+
+  .dashboard-header { display: flex; }
 
   .dashboard-heading {
     width: 100%;
