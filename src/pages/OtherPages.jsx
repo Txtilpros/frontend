@@ -27,7 +27,7 @@ export function About() {
     { year: '2017', event: 'Crossed 200+ loom installations across Tamil Nadu' },
     {year: '2019', event: 'Expanded operations into Karnataka' },
     { year: '2021', event: 'Launched dedicated AMC service contracts' },
-    { year: '2023', event: 'Crossed 1200+ Air Jet Loom installations milestone' },
+    { year: '2023', event: 'Crossed 1500+ Air Jet Loom installations milestone' },
   ]
   const team = [
     { role: 'Managing Director', exp: '20+ yrs', spec: 'Textile Machinery' },
@@ -51,7 +51,7 @@ export function About() {
               Starting as a small team of passionate textile engineers, we quickly earned the trust of mill owners through our honest dealings, technical competence, and genuine commitment to after-sales support. Within a year, we became authorized dealers for Red Flag — one of China's most reputed loom manufacturers.
             </p>
             <p style={{ fontSize: 16, color: '#4a5568', lineHeight: 1.8 }}>
-              Today, with 1200+ Air Jet Looms installed across Tamil Nadu , TXTILPROS stands as a leading textile machinery company in South India — and we're just getting started.
+              Today, with 1500+ Air Jet Looms installed across Tamil Nadu , TXTILPROS stands as a leading textile machinery company in South India — and we're just getting started.
             </p>
           </Motion.div>
           <Motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -219,8 +219,8 @@ export function Services() {
 // ── PROJECTS PAGE ─────────────────────────────────────────────────────────────
 export function Projects() {
   const stats = [
-    { num: '1200+', label: 'Air Jet Looms Installed', icon: '🏭' },
-    { num: '2', label: 'States Covered', icon: '📍' },
+    { num: '1500+', label: 'Air Jet Looms Installed', icon: '🏭' },
+    { num: '3', label: 'States Covered', icon: '📍' },
     { num: '12', label: 'Years in Operation', icon: '📅' },
     { num: '100+', label: 'Happy Clients', icon: '🤝' },
   ]
@@ -250,8 +250,9 @@ export function Projects() {
           {/* Regions */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, marginBottom: 80 }} className="region-resp">
             {[
-              { state: 'Tamil Nadu', num: '120+', cities: ['Coimbatore', 'Erode', 'Tirupur', 'Salem', 'Karur'], desc: 'Strong presence across the textile heartland of South India.' },
-              { state: 'Karnataka', num: '80+', cities: ['Bengaluru', 'Davangere', 'Hubballi', 'Raichur'], desc: 'Expanding footprint in Karnataka\'s growing textile sector.' },
+              { state: 'Tamil Nadu', num: '100+', cities: ['Coimbatore', 'Erode', 'Tirupur', 'Salem', 'Karur'], desc: 'Strong presence across the textile heartland of South India.' },
+              { state: 'Karnataka', num: '10+', cities: ['Bengaluru', 'Davangere', 'Hubballi', 'Raichur'], desc: 'Expanding footprint in Karnataka\'s growing textile sector.' },
+              { state: 'Andhra Pradesh', num: '10+', cities: ['Visakhapatnam', 'Vijayawada', 'Guntur'], desc: 'Established presence in Andhra Pradesh\'s textile industry.' },
             ].map((r, i) => (
               <Motion.div key={i} initial={{ opacity: 0, x: i === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                 style={{ background: 'white', borderRadius: 14, padding: 32, boxShadow: 'var(--shadow)', borderLeft: '4px solid var(--orange)' }}>
@@ -427,10 +428,10 @@ export function Blog() {
 // ── PRODUCTS PAGE ─────────────────────────────────────────────────────────────
 export function Products() {
   const specs = [
-    { label: 'Max Speed', val: '800–1200 RPM' }, { label: 'Reed Width', val: '150 – 360 cm' },
+    { label: 'Max Speed', val: '800–1200 RPM' }, { label: 'Reed Width', val: '150 – 390 cm' },
     { label: 'Weft Insertion', val: 'Air Jet (Multi-nozzle)' }, { label: 'Fabric Types', val: 'Cotton, Synthetic, Blends' },
-    { label: 'Control System', val: 'PLC + Touch Panel' }, { label: 'Warranty', val: '1 Year + Extended' },
-    { label: 'Power Supply', val: '3-Phase, 380V/50Hz' }, { label: 'Air Pressure', val: '5–7 Bar' },
+    { label: 'Control System', val: 'micro processor control' }, { label: 'Warranty', val: '1 Year + Extended' },
+    { label: 'Power Supply', val: '3-Phase, 415V/50Hz' }, { label: 'Air Pressure', val: '3 - 4.5 Bar' },
   ]
   const features = ['High Speed', 'Energy Efficient', 'Multi-Fabric', 'Digital Control', 'Wide Width', 'Low Maintenance', 'Auto Stop', 'Digital Counter']
   const parts = [

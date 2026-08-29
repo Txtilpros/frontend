@@ -3,14 +3,14 @@ import { motion as Motion } from 'framer-motion'
 import { FaPhone, FaCogs, FaWrench, FaHeadset, FaProjectDiagram, FaChartLine, FaBoxes, FaCertificate, FaGlobeAsia, FaMapMarkerAlt, FaClock, FaRupeeSign, FaFileContract, FaWhatsapp } from 'react-icons/fa'
 
 const stats = [
-  { num: '1200+', label: 'Looms Installed' },
+  { num: '1500+', label: 'Looms Installed' },
   { num: '20+', label: 'Years Experience' },
   { num: '100%', label: 'Tamil Nadu Covered' },
   { num: '24/7', label: 'After-Sales Support' },
 ]
 
 const highlights = [
-  { icon: <FaCogs size={28} />, num: '1200+', label: 'Air Jet Looms Installed' },
+  { icon: <FaCogs size={28} />, num: '1500+', label: 'Air Jet Looms Installed' },
   { icon: <FaCertificate size={28} />, num: '20+', label: 'Years of Industry Experience' },
   { icon: <FaHeadset size={28} />, num: 'Expert', label: 'Engineers Team' },
   { icon: <FaPhone size={28} />, num: '24/7', label: 'After-Sales Support' },
@@ -86,7 +86,7 @@ export default function Home() {
         TXTILPROS<br /><span style={{ color: 'var(--orange)' }}>MARKETING &</span><br />SERVICES
       </h1>
       <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.6)', margin: '20px 0 40px', lineHeight: 1.7, maxWidth: 480 }}>
-        Trusted Air Jet Loom Solutions Since 2014. Red Flag authorized dealer with 1200+ installations across South India.
+        Trusted Air Jet Loom Solutions Since 2014. Red Flag authorized dealer with 1500+ installations across South India.
       </p>
       <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
         <Link to="/login" className="btn btn-outline">Employee Login</Link>
@@ -177,7 +177,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{ background: 'var(--orange)', borderRadius: 12, padding: '20px 24px', color: 'white', display: 'inline-block', marginTop: 20, boxShadow: 'var(--shadow-lg)' }}>
-              <div style={{ fontFamily: 'var(--font-head)', fontSize: 36, letterSpacing: 1, lineHeight: 1 }}>1200+</div>
+              <div style={{ fontFamily: 'var(--font-head)', fontSize: 36, letterSpacing: 1, lineHeight: 1 }}>1500+</div>
               <div style={{ fontSize: 12, fontWeight: 500, opacity: 0.85, marginTop: 2 }}>Looms Sold & Installed</div>
             </div>
           </FadeUp>
