@@ -55,9 +55,9 @@ export default function Contact() {
                 Whether you're planning a new weaving unit, expanding your existing operation, or need urgent machine support — we're just a call away.
               </p>
               {[
-                { icon: <FaMapMarkerAlt />, title: 'Address', content: 'TXTILPROS MARKETING AND SERVICE\n97A, Jagannatha Nagar, 1st floor, Opp. Coimbatore Medical College, Civil Aerodrome Post, Coimbatore - 641014, Tamil Nadu, India' },
-                { icon: <FaPhone />, title: 'Phone', content: '+91 95970 57918' },
-                { icon: <FaEnvelope />, title: 'Email', content: 'office.txtilepros@gmail.com' },
+                { icon: <FaMapMarkerAlt />, title: 'Address', content: 'TXTILPROS MARKETING AND SERVICES\n97A, Jagannatha Nagar, 1st floor, Opp. Coimbatore Medical College, Civil Aerodrome Post, Coimbatore - 641014, Tamil Nadu, India' },
+                { icon: <FaPhone />, title: 'Phone', content: '+91 95970 57918' + '\n' + '+91 9894321474' },
+                { icon: <FaEnvelope />, title: 'Email', content: 'office.txtilpros@gmail.com' + '\n' + 'marketing@txtilpros.com' },
                 { icon: <FaClock />, title: 'Working Hours', content: 'Mon – Sat: 9:30 AM – 6:00 PM\nEmergency: 24/7' },
               ].map((d, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 16, marginBottom: 28 }}>
